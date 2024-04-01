@@ -1,0 +1,31 @@
+﻿@model List<MyPortolioUdemy.DAL.Entities.Experience>
+
+
+<div class="row about-content about-content--timeline">
+
+    <div class="col-full text-center">
+        <h3>İş ve Proje Deneyimlerim</h3>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="col-six tab-full left">
+            <div class="timeline">
+                <div class="timeline__block">
+                    <div class="timeline__bullet"></div>
+                    <div class="timeline__header">
+                        <p class="timeline__timeframe">@item.Date</p>
+                        <h3>@item.Head</h3>
+                        <h5>@item.Title</h5>
+                    </div>
+                    <div class="timeline__desc">
+                        <p>@item.Description.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+</div>
